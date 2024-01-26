@@ -6,8 +6,8 @@ from odoo.tests.common import TransactionCase
 
 
 class LeadCase(TransactionCase):
-    def setUp(self):
-        super(LeadCase, self).setUp()
+    def setUpClass(self):
+        super(LeadCase, self).setUpClass()
         self.medium = self.env["utm.medium"].create({"name": "Website"})
         self.campaign = self.env["utm.campaign"].create({"name": "Dëmo campaign"})
         self.source = self.env["utm.source"].create({"name": "Inteŕnet"})
